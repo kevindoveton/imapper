@@ -2,6 +2,15 @@
 
 This document describes how to write a user plugin. The purpose of a user plugin is to enable Imapper to authenticate users against a user database.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Interface](#interface)
+  - [Authentication](#authentication)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Interface
 
 Like all plugins, a users plugin should provide an initialized and instantiated object to imapper:

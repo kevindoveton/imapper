@@ -4,6 +4,40 @@ This document describes how to write a storage plugin, also known as a Mail Stor
 
 A storage plugin must implement the MSD interface, as described below.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Introduction](#introduction)
+- [Breaking Changes](#breaking-changes)
+    - [Change to Returned Messages - 0.5.0](#change-to-returned-messages---050)
+    - [Multiple Returned Messages Calls - 0.5.0](#multiple-returned-messages-calls---050)
+- [Overview](#overview)
+- [Interface](#interface)
+  - [Initiation](#initiation)
+  - [Mailbox](#mailbox)
+    - [Methods](#methods)
+      - [callbacks](#callbacks)
+      - [searchMessages](#searchmessages)
+        - [query parameters](#query-parameters)
+        - [String searches](#string-searches)
+        - [Date searches](#date-searches)
+        - [Flags](#flags)
+        - [Headers](#headers)
+        - [Logical NOT](#logical-not)
+        - [Logical OR](#logical-or)
+        - [results](#results)
+      - [getMessageRange](#getmessagerange)
+      - [createMessage](#createmessage)
+      - [expunge](#expunge)
+      - [getNamespaces](#getnamespaces)
+    - [Returned Objects](#returned-objects)
+      - [Folder](#folder)
+      - [Message](#message)
+        - [Attachments](#attachments)
+    - [Message Range](#message-range)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 A mail service might store messages in many backends:
