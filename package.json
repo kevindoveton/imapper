@@ -2,9 +2,10 @@
   "name": "imapper",
   "version": "0.5.0",
   "description": "IMAP server for real usage, inspired by Haraka for SMTP and descended from Hoodiecrow",
-  "main": "lib/server.js",
+  "main": "main.js",
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "start" : "node main.js"
   },
   "bin": {
     "imapper": "./bin/imapper"
