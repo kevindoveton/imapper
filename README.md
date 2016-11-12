@@ -19,55 +19,15 @@ Imapper offers [IMAP4ver1](http://tools.ietf.org/html/rfc3501) support.
 
 To run Imapper you need [Node.js](http://nodejs.org/) on your machine. Node should work on almost any platform, so Imapper should too.
 
-If you have Node.js installed, install Imapper with the `npm` command and run it:
-
+If you have Node.js installed,
 ```bash
-npm install -g imapper
-sudo imapper
+git clone https://github.com/kevindoveton/imapper
+cd imapper
+npm install
+sudo npm start
 ```
 
 Sudo is needed to bind to port 143 (default for IMAP) or 993 (default for IMAP over SSL). If you choose to use a higher port, say 1143 (`imapper -p 1143`), you do not need to use sudo.
-
-`imapper` command also provides an incoming SMTP server which distributes all incoming messages
-appropriately. To use it, use *smtpPort* option (`imapper --smtpPort=1025`). **The SMTP server has no proper filtering, security and scaling. You should not use the SMTP server in any production environment.** If you need a production quality SMTP server in nodejs, check out Haraka.
-
-> **Protip** Running `imapper --help` displays useful information about command line options for Imapper and some sample configuration data.
-
-After you have started Imapper server, you can point your IMAP client to `<hostname>:143`. Use the correct username and password as configured.
-
-Note that the storage driver for imapper as a standalone server is the memory storage. All data will be lost after shutting down the server.
-
-#### Options
-
-The Imapper command-line supports several options. Each can be passed as an environment variable, set as a command-line argument, or left to the default. Command-line overrides environment variable overrides default.
-
-* `--port port` or `IMAP_PORT=port`: which port to listen on. Default is 993 if `--secure` (SSL) or 143 if not.
-* `--smtpPort` or `IMAP_SMTPPORT=port`: which port to listen for SMTP delivered messages **for testing only**. Default is not to listen on SMTP.
-* `--ssl true` or `IMAP_SSL=true`: whether to listen over SSL on port 993 instead of clear on 143. Default is false.
-* `--debug true` or `IMAP_DEBUG=true`: whether to enable debug messages to console. Default is false.
-* `--storage path` or `IMAP_STORAGE=path`: path to a JSON file with the folders and messages to load on startup. Default is none.
-* `--plugin plugin --plugin plugin ...` or `IMAP_PLUGINS=plugina,pluginb,...,pluginn`: list of plugins to enable. 
-* `--config path` or `IMAP_CONFIG=path`: path to a json file with config options suited to the imapper as a module. Default is none.
-
-
-### Include as a Node.js module
-
-Add `imapper` dependency
-
-```bash
-npm install --save imapper
-```
-
-Create and start an IMAP server
-
-```javascript
-var imapper = require("imapper"),
-    server = imapper(options);
-server.listen(143);
-```
-
-See [complete.js](https://github.com/deitch/imapper/blob/master/examples/complete.js) for an example.
-
 
 ## Configuration
 Imapper requires configuration to tell it how to work. 
