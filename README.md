@@ -12,6 +12,44 @@ Pluggable components include:
 
 Imapper offers [IMAP4ver1](http://tools.ietf.org/html/rfc3501) support.
 
+# Table of Contents
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Usage](#usage)
+    - [Run as a standalone server](#run-as-a-standalone-server)
+  - [Configuration](#configuration)
+    - [Providing Configuration](#providing-configuration)
+      - [Command-Line](#command-line)
+      - [Module](#module)
+    - [Configuration Structure](#configuration-structure)
+    - [Available Plugins](#available-plugins)
+      - [imapper-storage-memory](#imapper-storage-memory)
+      - [imapper-users-htpasswd](#imapper-users-htpasswd)
+      - [imapper-users-static](#imapper-users-static)
+    - [Writing Plugins](#writing-plugins)
+  - [Status](#status)
+    - [IMAP4rev1](#imap4rev1)
+    - [Supported Plugins](#supported-plugins)
+  - [Existing XTOYBIRD commands](#existing-xtoybird-commands)
+- [Known issues](#known-issues)
+- [Running tests](#running-tests)
+  - [Example configs](#example-configs)
+    - [Cyrus](#cyrus)
+  - [Creating custom plugins](#creating-custom-plugins)
+    - [Plugin mehtods](#plugin-mehtods)
+      - [Add a capability](#add-a-capability)
+      - [Define a command](#define-a-command)
+      - [Retrieve an existing handler](#retrieve-an-existing-handler)
+      - [Reroute input from the client](#reroute-input-from-the-client)
+      - [Override output](#override-output)
+      - [Other possbile operations](#other-possbile-operations)
+  - [Debug](#debug)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 # Usage
 
