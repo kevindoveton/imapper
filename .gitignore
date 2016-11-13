@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 imaplog*
 npm-debug.log
+*.db
+*.db-journal
