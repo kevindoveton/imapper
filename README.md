@@ -65,7 +65,7 @@ npm install
 sudo npm start
 ```
 
-Sudo is needed to bind to port 143 (default for IMAP) or 993 (default for IMAP over SSL). If you choose to use a higher port, say 1143 (`imapper -p 1143`), you do not need to use sudo.
+Sudo is needed to bind to port 143 (default for IMAP) or 993 (default for IMAP over SSL). If you choose to use a higher port, say 1143, you do not need to use sudo.
 
 ## Configuration
 Imapper requires configuration to tell it how to work. 

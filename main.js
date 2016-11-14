@@ -1,5 +1,7 @@
-var storage = require('./lib/memstorage.js');
-// var storage = require('./lib/perstorage.js');
+// var storage = require('./lib/memstorage.js');
+var storage = require('./lib/perstorage.js');
+storage.load('./email.db');
+
 var authModule = require('./lib/auth.js')({
 	path: './email.db'
 });
