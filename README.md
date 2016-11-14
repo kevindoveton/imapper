@@ -1,4 +1,5 @@
 # Imapper
+*This fork aims to enable a user to deploy a lightweight IMAP server as simply as possible*
 
 Imapper is an IMAP Server. It is descended directly from [Hoodiecrow](https://github.com/andris9/hoodiecrow). However, Hoodiecrow is intended expicitly as a test server, not for production use. It only supports in-memory message storage, single user, no external authentication, and many other limitations. In the words of the talented [Andris Reiman](https://github.com/andris9), it is intended only for testing.
 
